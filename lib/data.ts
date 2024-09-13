@@ -1,10 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
 
 export const links = [
   {
@@ -16,16 +12,16 @@ export const links = [
     hash: "#about",
   },
   {
+    name: "Experience",
+    hash: "#experience",
+  },
+  {
     name: "Projects",
     hash: "#projects",
   },
   {
     name: "Skills",
     hash: "#skills",
-  },
-  {
-    name: "Experience",
-    hash: "#experience",
   },
   {
     name: "Contact",
@@ -35,73 +31,121 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Matriculation Degree",
+    location: "St. Xavier's High School, Raipur",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Completed my matriculation degree with 94.4% in the Indian Certificate School Examination, which is the GCSE equivalent in India.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2013 - 2015",
+    position: "left",
+  },
+
+  {
+    title: "High School Degree",
+    location: "Ryan International School, Raipur",
+    description:
+      "Scored 93.4% in the Central Board of Secondary Education, which is the A-level equivalent in India.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2015 - 2017",
+    position: "left",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Bachelor of Technology in Computer Science & Engineering",
+    location: "KIIT University, Bhubaneswar",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Graduated with a CGPA of 9.68, which is equivalent to a first-class honours degree.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2017 - 2021",
+    position: "left",
+  },
+  {
+    title: "Internship, Machine Learning",
+    location: "HighRadius Technologies",
+    description:
+      "",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "Jul 2020 - Oct 2020",
+    position: "right",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Internship, Software Development Engineer in Test",
+    location: "Commvault",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Worked on automating backup and recovery validation of Linux backup agents.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Oct 2020 - Jul 2021",
+    position: "right",
+  },
+  {
+    title: "Associate Software Engineer",
+    location: "Commvault",
+    description:
+      "Joined as a full-time employee after my internship. I worked as a Q/A Engineer in the Kubernetes team.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Jul 2021 - Jan 2022",
+    position: "right",
+  },
+  {
+    title: "Software Engineer",
+    location: "Commvault",
+    description:
+      "Quickly got promoted, with additional responsibilities. Worked both, as a Q/A Automation Engineer, and as a Developer in the Kubernetes team.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Jan 2022 - Aug 2023",
+    position: "right",
+  },
+  {
+    title: "Master of Science in Advanced Computer Science",
+    location: "University of Manchester",
+    description:
+      "Pursuing a Master's degree in Advanced Computer Science. I am specializing in Computer Security.",
+    icon: React.createElement(LuGraduationCap),
+    date: "Sept 2023 - Sept 2024",
+    position: "left",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Adaptive Streaming",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "Investigated the impact of snapshot streaming on QEMU QCoW2 disk images, and developed a novel 'adaptive streaming' algorithm to efficiently stream snapshots during low I/O periods.",
+    tags: ["C", "QEMU", "QCoW2", "Linux", "KVM"],
+    imageUrl: "",
+    viewUrl: "https://github.com/triii10/qemu-adaptive-streaming",
   },
   {
-    title: "rmtDev",
+    title: "CDCL with C++",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Implemented the CDCL algorithm in C++ for the course 'Advanced Algorithms and Data Structures'.",
+    tags: ["C++", "CDCL", "Automated Reasoning"],
+    imageUrl: "",
+    viewUrl: "https://github.com/triii10/cdcl",
   },
   {
-    title: "Word Analytics",
+    title: "Kubernetes Issues",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Reported several issues in the Kubernetes project over the course of my employment at Commvault.",
+    tags: ["Kubernetes", "Go", "Python"],
+    imageUrl: "",
+    viewUrl: "https://github.com/issues?q=is%3Aissue+author%3Atriii10+archived%3Afalse+is%3Aclosed",
   },
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
+  "C",
+  "C++",
   "Python",
-  "Django",
-  "Framer Motion",
+  "Rust",
+  "Java",
+  "Docker",
+  "Kubernetes",
+  "Linux",
+  "Bash",
+  "Git",
+  "React",
+  "QEMU",
+  "MySQL",
+  "MSSQL",
+  "Shopify Liquid",
 ] as const;
