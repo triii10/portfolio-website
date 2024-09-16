@@ -22,20 +22,20 @@ export default function About() {
         After graduating with a BTech degree in{" "}
         <span className="font-bold">Computer Science & Engineering</span>, I joined{" "}
         <span className="font-bold">Commvault</span> as a Q/A Engineer, and quickly progressed
-        though the Kubernetes team, soon working as a Developer as well. In 2023, I set out 
+        though the ranks in the Kubernetes team, soon working as a Developer as well. In 2023, I set out 
         to pursue a Master's degree in Advanced Computer Science from The University of Manchester, in the UK.
         My core stack includes languages such as{" "}<span className="font-medium">Python, C, C++</span>{" "} 
         and virtualisation technologies like{" "} <span className="font-medium">Docker, Kubernetes</span>. 
-        I am also familiar with Rust and Java. I am always looking to learn new technologies. 
-        I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
+        I am also familiar with Rust and Java and always looking to learn new technologies.
       </p>
 
       <p>I also enjoy{" "}
-        <span className="font-medium">contributing to open-source projects</span>. I am currently
-        contributing to{" "} <span className="font-medium">projects with 6k+ stars</span>.
-        <span className="italic">When I'm not coding</span>, I enjoy playing Chess and watching Football. 
+        <span className="font-medium">contributing to open-source projects</span>, currently involved in{" "}
+        <span className="font-medium">projects with 6k+ stars</span>.{" "}
+        When I'm not coding, I enjoy playing Chess and watching Football. 
+      </p>
+      <p>
+        Currently, I am looking for <span className="font-medium">full-time positions</span> as a software developer in the UK.
       </p>
     </motion.section>
   );

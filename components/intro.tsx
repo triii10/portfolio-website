@@ -53,7 +53,7 @@ export default function Intro() {
         Hello, I'm <span className="font-bold">Trilok.</span> I'm a{" "}
         <span className="font-bold">Software Engineer</span> with{" "}
         <span className="font-bold">2+ years</span> of professional experience. I enjoy
-        working on <span className="italic">open-source</span> applications and competitive programming. 
+        working on open-source applications and competitive programming. 
         My focus is on <span className="font-bold">cloud technologies</span>.
       </motion.h1>
 
