@@ -1,4 +1,5 @@
 import Header from "@/components/header";
+import Umami from "@/components/umami";
 import "./globals.css";
 import { Fira_Code } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
@@ -23,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <head>
-        <script defer src="https://cloud.umami.is/script.js" data-website-id="e98a7e66-d9c1-4d0f-9ef9-89aa697ff2cd"></script>
+        <Umami />
       </head>
       <body
         className={`${fontVar.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
