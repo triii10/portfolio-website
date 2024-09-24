@@ -11,7 +11,7 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="mb-28 max-w-[65rem] text-center leading-8 sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -19,22 +19,15 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        After graduating with a BTech degree in{" "}
-        <span className="font-bold">Computer Science & Engineering</span>, I joined{" "}
-        <span className="font-bold">Commvault</span> as a Q/A Engineer, and quickly progressed
-        though the ranks in the Kubernetes team, soon working as a Developer as well. In 2023, I set out 
-        to pursue a Master's degree in Advanced Computer Science from The University of Manchester, in the UK.
-        My core stack includes languages such as{" "}<span className="font-medium">Python, C, C++</span>{" "} 
-        and virtualisation technologies like{" "} <span className="font-medium">Docker, Kubernetes</span>. 
-        I am also familiar with Rust and Java and always looking to learn new technologies.
+      I am a proactive and results-oriented software engineer with over 3 years of combined experience in software development, testing, and automation. I have a strong foundation in programming languages such as Python and C++, with expertise in developing robust, fault-tolerant systems and optimizing automation frameworks. My academic journey includes a Bachelor's degree in Computer Science and Engineering, where I graduated with a GPA of 9.68/10, and I am currently pursuing a Master's in Advanced Computer Science from the University of Manchester, with an expected Distinction.
       </p>
-
-      <p>I also enjoy{" "}
-        <span className="font-medium">contributing to open-source projects</span>, currently involved in{" "}
-        <span className="font-medium">projects with 6k+ stars</span>.{" "}
-        When I'm not coding, I enjoy playing Chess and watching Football. 
+      <p className="mb-3">
+      In my previous roles, I have worked on complex projects ranging from developing automation frameworks for Kubernetes backup and recovery to implementing customer-facing APIs. I have experience working across diverse technologies, including Docker, Kubernetes, Selenium, MSSQL, and cloud platforms like Azure and AWS. My contributions have consistently improved operational efficiency, reduced manual testing efforts, and enhanced user experiences.
       </p>
-      <p>
+      <p className="mb-3">
+      Additionally, I have strong experience collaborating with cross-functional teams, mentoring junior developers, and adhering to agile methodologies to deliver high-quality solutions on time. My passion for problem-solving, coupled with my experience in designing secure and maintainable code, makes me well-suited for dynamic environments where innovation and efficiency are key.
+      </p>
+      <p className="mb-3">
         Currently, I am looking for <span className="font-medium">full-time positions</span> as a software developer in the UK.
       </p>
     </motion.section>

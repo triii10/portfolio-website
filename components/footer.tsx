@@ -7,7 +7,7 @@ export default function Footer() {
         &copy; 2024 Trilok Bhattacharya. All rights reserved.
       </small>
       <p className="text-xs">
-        <span className="font-semibold">About this website:</span> built on top of ByteGrad's 
+        <span className="font-semibold">About this website:</span> Built on top of ByteGrad's 
         portfolio template.{" "} <span className="underline"><a href="https://github.com/ByteGrad/portfolio-website">
           View source code
         </a></span>

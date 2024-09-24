@@ -34,7 +34,7 @@ export const experiencesData = [
     title: "Matriculation Degree",
     location: "St. Xavier's High School, Raipur",
     description:
-      "Completed my matriculation degree with 94.4% in the Indian Certificate School Examination, which is the GCSE equivalent in India.",
+      "Completed my matriculation degree with 94.4% in the Indian Certificate School Examination (ICSE), which is the GCSE equivalent in India.",
     icon: React.createElement(LuGraduationCap),
     date: "2013 - 2015",
     position: "left",
@@ -44,7 +44,7 @@ export const experiencesData = [
     title: "High School Degree",
     location: "Ryan International School, Raipur",
     description:
-      "Scored 93.4% in the Central Board of Secondary Education, which is the A-level equivalent in India.",
+      "Scored 93.4% in the Central Board of Secondary Education (CBSE), which is the A-level equivalent in India.",
     icon: React.createElement(LuGraduationCap),
     date: "2015 - 2017",
     position: "left",
@@ -62,7 +62,7 @@ export const experiencesData = [
     title: "Internship, Machine Learning",
     location: "HighRadius Technologies",
     description:
-      "",
+      "Worked on predicting partial payments for B2B transactions using machine learning models and developed a full-stack invoice management application.",
     icon: React.createElement(CgWorkAlt),
     date: "Jul 2020 - Oct 2020",
     position: "right",
@@ -71,7 +71,7 @@ export const experiencesData = [
     title: "Internship, Software Development Engineer in Test",
     location: "Commvault",
     description:
-      "Worked on automating backup and recovery validation of Linux backup agents.",
+      "Automated testing for Linux Filesystem backups and Kubernetes workloads, ensuring robustness in cloud and on-prem environments.",
     icon: React.createElement(CgWorkAlt),
     date: "Oct 2020 - Jul 2021",
     position: "right",
@@ -80,7 +80,7 @@ export const experiencesData = [
     title: "Associate Software Engineer",
     location: "Commvault",
     description:
-      "Joined as a full-time employee after my internship. I worked as a Q/A Engineer in the Kubernetes team.",
+      "Joined full-time to work as a Q/A Engineer on the Kubernetes team, handling testing and customer escalations for critical projects.",
     icon: React.createElement(CgWorkAlt),
     date: "Jul 2021 - Jan 2022",
     position: "right",
@@ -89,7 +89,7 @@ export const experiencesData = [
     title: "Software Engineer",
     location: "Commvault",
     description:
-      "Quickly got promoted, with additional responsibilities. Worked both, as a Q/A Automation Engineer, and as a Developer in the Kubernetes team.",
+      "Promoted to Software Engineer, where I developed automation frameworks and contributed to Kubernetes-related development, leading multiple projects.",
     icon: React.createElement(CgWorkAlt),
     date: "Jan 2022 - Aug 2023",
     position: "right",
@@ -98,13 +98,12 @@ export const experiencesData = [
     title: "Master of Science in Advanced Computer Science",
     location: "University of Manchester",
     description:
-      "Pursuing a Master's degree in Advanced Computer Science. I am specializing in Computer Security.",
+      "Pursuing a Master's degree in Advanced Computer Science with a specialization in Computer Security. Expected to graduate with Distinction.",
     icon: React.createElement(LuGraduationCap),
     date: "Sept 2023 - Sept 2024",
     position: "left",
   },
 ] as const;
-
 export const projectsData = [
   {
     title: "Adaptive Streaming",
@@ -123,12 +122,36 @@ export const projectsData = [
     viewUrl: "https://github.com/triii10/cdcl",
   },
   {
+    title: "CounterStrike",
+    description:
+      "Group effort to design and develop a CLI to automatically collect complex outputs from the Java Bytecode Model Checking (JBMC) tool and generate compilable counter-examples, using Rust.",
+    tags: ["JMBC", "Java", "Rust"],
+    imageUrl: "",
+    viewUrl: "https://github.com/karaolidis/comp63342-project",
+  },
+  {
     title: "Kubernetes Issues",
     description:
       "Reported several issues in the Kubernetes project over the course of my employment at Commvault.",
     tags: ["Kubernetes", "Go", "Python"],
     imageUrl: "",
     viewUrl: "https://github.com/issues?q=is%3Aissue+author%3Atriii10+archived%3Afalse+is%3Aclosed",
+  },
+  {
+    title: "SGO Based Cluster Head Identification in Underwater Acoustic Sensor Networks",
+    description:
+      "Application of population-based Social Group Optimization algorithm on the NP-Hard problem of Path Planning. Accepted as a conference paper in The 5th International Conference on Future Networks & Distributed Systems, 2022.",
+    tags: ["Python", "SGO"],
+    imageUrl: "",
+    viewUrl: "https://dl.acm.org/doi/abs/10.1145/3508072.3508219",
+  },
+  {
+    title: "AI-Enabled FinTech B2B Invoice Management Application",
+    description:
+      "A full-stack Invoice Management Application using ReactJS, JDBC, Java, and JSP. Integrated with a Machine Learning Model to predict partial payments, and Dialogflow digital assistant to provide insightful answers.",
+    tags: ["Python", "Java", "JDBC", "ReactJS", "Dialogflow"],
+    imageUrl: "",
+    viewUrl: null,
   },
 ] as const;
 
