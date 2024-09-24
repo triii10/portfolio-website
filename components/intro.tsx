@@ -20,7 +20,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[60rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="mb-28 max-w-[75rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -50,11 +50,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Hello, I'm <span className="font-bold">Trilok.</span> I'm a{" "}
-        <span className="font-bold">Software Engineer</span> with{" "}
-        <span className="font-bold">2+ years</span> of professional experience. I enjoy
-        working on open-source applications and competitive programming. 
-        My focus is on <span className="font-bold">cloud technologies</span>.
+        Hello, I'm <span className="font-bold">Trilok</span>, a code-slinging software engineer with <span className="font-bold">3+ years</span> of experience in Python, C++, and Kubernetes, now sharpening my skills with a Master's in Computer Security - <span className="italic">because breaking things is fun, but securing them is better!</span>
       </motion.h1>
 
       <motion.div
