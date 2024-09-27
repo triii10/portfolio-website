@@ -8,7 +8,11 @@ export default function Footer() {
       </small>
       <p className="text-xs">
         <span className="font-semibold">About this website:</span> Built on top of ByteGrad's 
-        portfolio template.{" "} <span className="underline"><a href="https://github.com/ByteGrad/portfolio-website">
+        portfolio template.{" "} <span className="underline">
+          <a 
+            href="https://github.com/ByteGrad/portfolio-website"
+            data-umami-event="source-code-click"
+          >
           View source code
         </a></span>
       </p>
