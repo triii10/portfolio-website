@@ -10,7 +10,7 @@ export default function Footer() {
         <span className="font-semibold">About this website:</span> Built on top of ByteGrad's 
         portfolio template.{" "} <span className="underline">
           <a 
-            href="https://github.com/ByteGrad/portfolio-website"
+            href="https://github.com/triii10/portfolio-website"
             data-umami-event="source-code-click"
           >
           View source code
