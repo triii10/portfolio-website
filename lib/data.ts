@@ -110,8 +110,9 @@ export const projectsData = [
     description:
       "Investigated the impact of snapshot streaming on QEMU QCoW2 disk images, and developed a novel 'adaptive streaming' algorithm to efficiently stream snapshots during low I/O periods.",
     tags: ["C", "QEMU", "QCoW2", "Linux", "KVM"],
-    imageUrl: "",
+    imageUrl: "/Qemu-logo.png",
     viewUrl: "https://github.com/triii10/qemu-adaptive-streaming",
+    downloadUrl: "/Trilok_Bhattacharya_MSc_Dissertation.pdf"
   },
   {
     title: "CDCL with C++",
@@ -120,6 +121,7 @@ export const projectsData = [
     tags: ["C++", "CDCL", "Automated Reasoning"],
     imageUrl: "",
     viewUrl: "https://github.com/triii10/cdcl",
+    downloadUrl: "",
   },
   {
     title: "CounterStrike",
@@ -128,14 +130,16 @@ export const projectsData = [
     tags: ["JMBC", "Java", "Rust"],
     imageUrl: "",
     viewUrl: "https://github.com/karaolidis/comp63342-project",
+    downloadUrl: "",
   },
   {
     title: "Kubernetes Issues",
     description:
       "Reported several issues in the Kubernetes project over the course of my employment at Commvault.",
     tags: ["Kubernetes", "Go", "Python"],
-    imageUrl: "",
+    imageUrl: "/k8slogo.png",
     viewUrl: "https://github.com/issues?q=is%3Aissue+author%3Atriii10+archived%3Afalse+is%3Aclosed",
+    downloadUrl: "",
   },
   {
     title: "SGO Based Cluster Head Identification in Underwater Acoustic Sensor Networks",
@@ -144,6 +148,7 @@ export const projectsData = [
     tags: ["Python", "SGO"],
     imageUrl: "",
     viewUrl: "https://dl.acm.org/doi/abs/10.1145/3508072.3508219",
+    downloadUrl: "",
   },
   {
     title: "AI-Enabled FinTech B2B Invoice Management Application",
@@ -152,6 +157,7 @@ export const projectsData = [
     tags: ["Python", "Java", "JDBC", "ReactJS", "Dialogflow"],
     imageUrl: "",
     viewUrl: null,
+    downloadUrl: "",
   },
 ] as const;
 

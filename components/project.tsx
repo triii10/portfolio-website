@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { FaEye } from "react-icons/fa";
+import { FaEye, FaFileDownload } from "react-icons/fa";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -15,6 +15,7 @@ export default function Project({
   tags,
   imageUrl,
   viewUrl,
+  downloadUrl
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -54,15 +55,32 @@ export default function Project({
       {/* Eye Icon for viewing the project */}
       <a
         href={viewUrl || undefined}
-        className="absolute top-4 right-4 p-2 bg-black/70 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" // Added z-10
-        target="_blank"
-        rel="noopener noreferrer"
+        className={`absolute top-4 right-4 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 ${
+          viewUrl ? "bg-black/70 text-white" : "bg-gray-400 text-gray-200 cursor-not-allowed"
+        }`}
+        target={viewUrl ? "_blank" : undefined}
+        rel={viewUrl ? "noopener noreferrer" : undefined}
+        data-umami-event={`click-project-${title.replace(/\s+/g, '-').toLowerCase()}`}
       >
         <FaEye className="text-xl" />
       </a>
 
+      {/* Download Icon for downloading the project report */}
+      <a
+        href={downloadUrl || undefined}
+        className={`absolute top-4 right-16 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 ${
+          downloadUrl ? "bg-black/70 text-white" : "bg-gray-400 text-gray-200 cursor-not-allowed"
+        }`}
+        download={!!downloadUrl}
+        data-umami-event={`download-project-${title.replace(/\s+/g, '-').toLowerCase()}`}
+      >
+        <FaFileDownload className="text-xl" />
+      </a>
+
       <Image
         src={imageUrl || placeholderImg}
+        width={500}
+        height={500}
         alt="Project I worked on"
         quality={95}
         className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
