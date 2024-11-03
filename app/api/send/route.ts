@@ -23,7 +23,6 @@ export async function POST(request: Request) {
         from: 'Contact Form <onboarding@resend.dev>',
         to: ['hi@trilok.dev'],
         subject: 'Message from contact form',
-        reply_to: senderEmail,
         react: React.createElement(ContactFormEmail, { message, senderEmail }),
       });
 
