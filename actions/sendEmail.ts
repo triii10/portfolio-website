@@ -1,11 +1,7 @@
 "use client";
 
-import React from "react";
-import { Resend } from "resend";
 import { validateString, getErrorMessage } from "@/lib/utils";
-import ContactFormEmail from "@/email/contact-form-email";
 export const runtime = 'edge';
-const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
 
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
@@ -25,16 +21,20 @@ export const sendEmail = async (formData: FormData) => {
 
   let data;
   try {
-    data = await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>",
-      to: "hi@trilok.dev",
-      subject: "Message from contact form",
-      reply_to: senderEmail,
-      react: React.createElement(ContactFormEmail, {
-        message: message,
+
+    const response = await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
         senderEmail: senderEmail,
+        message: message,
       }),
     });
+    if (!response.ok) {
+      throw new Error('Failed to send email');
+    }
   } catch (error: unknown) {
     return {
       error: getErrorMessage(error),
