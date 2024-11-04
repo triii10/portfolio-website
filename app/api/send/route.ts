@@ -17,14 +17,6 @@ export async function POST(request: Request) {
     }
 
     try {
-    //   const data = await resend.emails.send({
-    //     from: 'Contact Form <onboarding@resend.dev>',
-    //     to: ['hi@trilok.dev'],
-    //     subject: 'Message from contact form',
-    //     
-    //   });
-
-
       const data = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
