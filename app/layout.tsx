@@ -10,7 +10,6 @@ import { Toaster } from "react-hot-toast";
 
 const fontVar = Fira_Code({ subsets: ["latin"] });
 
-export const runtime = 'edge';
 export const metadata = {
   title: "Trilok | Personal Portfolio",
   description: "Trilok is a professional Software Engineer with 3+ years of experience.",

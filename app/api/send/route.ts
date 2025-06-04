@@ -1,5 +1,3 @@
-export const runtime = 'edge';
-
 import { getErrorMessage, validateString } from '@/lib/utils';
 
 export async function POST(request: Request) {

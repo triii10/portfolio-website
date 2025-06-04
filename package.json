@@ -8,10 +8,12 @@
     "start": "next start",
     "lint": "next lint",
     "pages:build": "npx @cloudflare/next-on-pages",
-    "preview": "npm run pages:build && wrangler dev",
-    "deploy": "npm run pages:build && wrangler deploy"
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
+    "@opennextjs/cloudflare": "^1.1.0",
     "@react-email/components": "^0.0.26",
     "@react-email/tailwind": "^1.0.0",
     "@types/node": "22.8.7",
@@ -39,6 +41,7 @@
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.13.12",
     "@types/react-vertical-timeline-component": "^3.3.6",
+    "esbuild": "^0.25.5",
     "vercel": "39.1.1",
     "wrangler": "^4.19.1"
   },
