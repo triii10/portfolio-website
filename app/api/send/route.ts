@@ -1,6 +1,5 @@
 export const runtime = 'edge';
 
-import { Resend } from 'resend';
 import { getErrorMessage, validateString } from '@/lib/utils';
 
 export async function POST(request: Request) {
