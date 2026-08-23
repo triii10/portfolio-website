@@ -7,12 +7,23 @@ import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
+import type { Metadata } from "next";
 
 const fontVar = Fira_Code({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Trilok | Personal Portfolio",
-  description: "Trilok is a professional Software Engineer with 3+ years of experience.",
+export const metadata: Metadata = {
+  metadataBase: new URL("https://trilok.dev"),
+  title: "Trilok Bhattacharya | Software Engineer",
+  description:
+    "London-based software engineer specialising in dependable C++ and C# systems, developer tooling, and platform modernisation.",
+  openGraph: {
+    title: "Trilok Bhattacharya | Software Engineer",
+    description:
+      "London-based software engineer specialising in dependable C++ and C# systems, developer tooling, and platform modernisation.",
+    url: "/",
+    siteName: "Trilok Bhattacharya",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -21,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
       <head>
         <Umami />
       </head>

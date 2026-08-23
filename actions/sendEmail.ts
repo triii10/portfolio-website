@@ -19,9 +19,7 @@ export const sendEmail = async (formData: FormData) => {
     };
   }
 
-  let data;
   try {
-
     const response = await fetch('/api/send', {
       method: 'POST',
       headers: {
@@ -32,16 +30,19 @@ export const sendEmail = async (formData: FormData) => {
         message: message,
       }),
     });
+    const data = await response.json();
+
     if (!response.ok) {
-      throw new Error('Failed to send email');
+      return {
+        error: data.error || "Failed to send email",
+      };
     }
+
+    return { data };
   } catch (error: unknown) {
     return {
       error: getErrorMessage(error),
     };
   }
 
-  return {
-    data,
-  };
 };

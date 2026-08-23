@@ -19,16 +19,16 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-      I am a proactive and results-oriented software engineer with over 3 years of combined experience in software development, testing, and automation. I have a strong foundation in programming languages such as Python and C++, with expertise in developing robust, fault-tolerant systems and optimizing automation frameworks. I'm currently working on the Axiom trading and brokerage platform, with C++ and C#, as a Software Engineer at TP ICAP. My academic journey includes a Bachelor's degree in Computer Science and Engineering, where I graduated with a GPA of 9.68/10, and a Master's in Advanced Computer Science from the University of Manchester, with a Distinction.
+        I&apos;m a proactive and results-oriented software engineer with more than four years of combined experience in software development, testing, and automation. I have a strong foundation in Python, C++, and C#, with a focus on developing robust, fault-tolerant systems and improving the tools around them. I&apos;m currently a Software Engineer at TP ICAP, where I work on high-throughput applications and developer tooling.
       </p>
       <p className="mb-3">
-      In my previous roles, I have worked on complex projects ranging from developing automation frameworks for Kubernetes backup and recovery to implementing customer-facing APIs. I have experience working across diverse technologies, including Docker, Kubernetes, Selenium, MSSQL, and cloud platforms like Azure and AWS. My contributions have consistently improved operational efficiency, reduced manual testing efforts, and enhanced user experiences.
+        At TP ICAP, I have worked on modernising a large C++ codebase, developing reusable logging and audit-trail systems, investigating production issues, and optimising CI/CD pipelines. My work has included a 32-bit to 64-bit migration spanning more than 50,000 lines of code and build-pipeline improvements that reduced build times by 30%.
       </p>
       <p className="mb-3">
-      Additionally, I have strong experience collaborating with cross-functional teams, mentoring junior developers, and adhering to agile methodologies to deliver high-quality solutions on time. My passion for problem-solving, coupled with my experience in designing secure and maintainable code, makes me well-suited for dynamic environments where innovation and efficiency are key.
+        In previous roles at Commvault, I worked across Kubernetes backup and recovery, automation frameworks, Linux diagnostics, and customer escalations. I enjoy collaborating with cross-functional teams, mentoring junior developers, and using agile ways of working to deliver practical, high-quality solutions.
       </p>
       <p className="mb-3">
-        Currently, I am looking for <span className="font-medium">full-time positions</span> as a software developer in the UK.
+        I hold an MSc in Advanced Computer Science from the University of Manchester, graduating with Distinction and specialising in Computer Security. I care about clear, maintainable code and enjoy solving difficult systems problems where reliability, performance, and developer experience all matter.
       </p>
     </motion.section>
   );

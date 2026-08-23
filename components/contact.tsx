@@ -42,7 +42,7 @@ export default function Contact() {
       <form
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
+          const { error } = await sendEmail(formData);
 
           if (error) {
             toast.error(error);
@@ -57,7 +57,9 @@ export default function Contact() {
           name="senderEmail"
           type="email"
           required
-          maxLength={500}
+          maxLength={254}
+          autoComplete="email"
+          aria-label="Your email address"
           placeholder="Your email"
         />
         <textarea
@@ -66,6 +68,7 @@ export default function Contact() {
           placeholder="Your message"
           required
           maxLength={5000}
+          aria-label="Your message"
         />
         <SubmitBtn />
       </form>

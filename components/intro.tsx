@@ -50,7 +50,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Hello, I'm <span className="font-bold">Trilok</span>, a code-slinging software engineer with <span className="font-bold">3+ years</span> of experience in Python, C++, and Kubernetes, now sharpening my skills with a Master's in Computer Security - <span className="italic">because breaking things is fun, but securing them is better!</span>
+        Hello, I&apos;m <span className="font-bold">Trilok</span>, a code-slinging software engineer with <span className="font-bold">4+ years</span> of experience in Python, C++, and Kubernetes, now putting my Master&apos;s in Computer Security to work - <span className="italic">because breaking things is fun, but securing them is better!</span>
       </motion.h1>
 
       <motion.div
@@ -88,6 +88,8 @@ export default function Intro() {
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://linkedin.com/in/trilokb"
           target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Trilok's LinkedIn profile"
           data-umami-event="linkedin-click"
         >
           <BsLinkedin />
@@ -97,6 +99,8 @@ export default function Intro() {
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://github.com/triii10"
           target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Trilok's GitHub profile"
           data-umami-event="github-click"
         >
           <RxGithubLogo />
@@ -106,6 +110,8 @@ export default function Intro() {
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://blog.trilok.dev"
           target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Trilok's blog"
           data-umami-event="blog-click"
         >
           <FaBloggerB />

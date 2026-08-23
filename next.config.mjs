@@ -1,10 +1,26 @@
-import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev';
 /** @type {import('next').NextConfig} */
 
-const nextConfig = {};
-
-if (process.env.NODE_ENV === 'development') {
-  await setupDevPlatform();
-}
+const nextConfig = {
+  async rewrites() {
+    return [
+      {
+        source: "/script.js",
+        destination: "https://cloud.umami.is/script.js",
+      },
+      {
+        source: "/pdf",
+        destination: "/",
+      },
+    ];
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+    ],
+  },
+};
 
 export default nextConfig;

@@ -15,7 +15,7 @@ export default function Project({
   tags,
   imageUrl,
   viewUrl,
-  downloadUrl
+  downloadUrl,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -52,36 +52,36 @@ export default function Project({
         </ul>
       </div>
 
-      {/* Eye Icon for viewing the project */}
-      <a
-        href={viewUrl || undefined}
-        className={`absolute top-4 right-4 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 ${
-          viewUrl ? "bg-black/70 text-white" : "bg-gray-400 text-gray-200 cursor-not-allowed"
-        }`}
-        target={viewUrl ? "_blank" : undefined}
-        rel={viewUrl ? "noopener noreferrer" : undefined}
-        data-umami-event={`click-project-${title.replace(/\s+/g, '-').toLowerCase()}`}
-      >
-        <FaEye className="text-xl" />
-      </a>
+      {viewUrl && (
+        <a
+          href={viewUrl}
+          className="absolute top-4 right-4 z-10 rounded-full bg-black/70 p-2 text-white opacity-100 transition-opacity duration-300 sm:opacity-0 sm:group-hover:opacity-100 focus:opacity-100"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`View ${title}`}
+          data-umami-event={`click-project-${title.replace(/\s+/g, "-").toLowerCase()}`}
+        >
+          <FaEye className="text-xl" />
+        </a>
+      )}
 
-      {/* Download Icon for downloading the project report */}
-      <a
-        href={downloadUrl || undefined}
-        className={`absolute top-4 right-16 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 ${
-          downloadUrl ? "bg-black/70 text-white" : "bg-gray-400 text-gray-200 cursor-not-allowed"
-        }`}
-        download={!!downloadUrl}
-        data-umami-event={`download-project-${title.replace(/\s+/g, '-').toLowerCase()}`}
-      >
-        <FaFileDownload className="text-xl" />
-      </a>
+      {downloadUrl && (
+        <a
+          href={downloadUrl}
+          className="absolute top-4 right-16 z-10 rounded-full bg-black/70 p-2 text-white opacity-100 transition-opacity duration-300 sm:opacity-0 sm:group-hover:opacity-100 focus:opacity-100"
+          download
+          aria-label={`Download the report for ${title}`}
+          data-umami-event={`download-project-${title.replace(/\s+/g, "-").toLowerCase()}`}
+        >
+          <FaFileDownload className="text-xl" />
+        </a>
+      )}
 
       <Image
         src={imageUrl || placeholderImg}
         width={500}
         height={500}
-        alt="Project I worked on"
+        alt={`${title} project visual`}
         quality={95}
         className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
         transition 

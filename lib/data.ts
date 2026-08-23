@@ -12,7 +12,7 @@ export const links = [
     hash: "#about",
   },
   {
-    name: "Experiences",
+    name: "Experience",
     hash: "#experience",
   },
   {
@@ -33,7 +33,8 @@ export const experiencesData = [
   {
     title: "Software Engineer",
     location: "TP ICAP",
-    description: "Core team member of the development team working on the Axiom trading platform.",
+    description:
+      "Core team member of the development team working on the Axiom trading platform.",
     icon: React.createElement(CgWorkAlt),
     date: "Dec 2024 - Present",
     position: "right",
@@ -41,7 +42,8 @@ export const experiencesData = [
   {
     title: "Master of Science in Advanced Computer Science",
     location: "University of Manchester",
-    description: "Graduated with a distinction in Master of Science in Advanced Computer Science, with specialisaiton in Computer Security.",
+    description:
+      "Graduated with a distinction in Master of Science in Advanced Computer Science, with specialisation in Computer Security.",
     icon: React.createElement(LuGraduationCap),
     date: "Sept 2023 - Sept 2024",
     position: "left",
@@ -49,7 +51,8 @@ export const experiencesData = [
   {
     title: "Software Engineer",
     location: "Commvault",
-    description: "Promoted to Software Engineer, where I developed automation frameworks and contributed to Kubernetes-related development, leading multiple projects.",
+    description:
+      "Promoted to Software Engineer, where I developed automation frameworks and contributed to Kubernetes-related development, leading multiple projects.",
     icon: React.createElement(CgWorkAlt),
     date: "Jan 2022 - Aug 2023",
     position: "right",
@@ -57,7 +60,8 @@ export const experiencesData = [
   {
     title: "Associate Software Engineer",
     location: "Commvault",
-    description: "Joined full-time to work as a Q/A Engineer on the Kubernetes team, handling testing and customer escalations for critical projects.",
+    description:
+      "Joined full-time to work as a Q/A Engineer on the Kubernetes team, handling testing and customer escalations for critical projects.",
     icon: React.createElement(CgWorkAlt),
     date: "Jul 2021 - Jan 2022",
     position: "right",
@@ -65,7 +69,8 @@ export const experiencesData = [
   {
     title: "Internship, Software Development Engineer in Test",
     location: "Commvault",
-    description: "Automated testing for Linux Filesystem backups and Kubernetes workloads, ensuring robustness in cloud and on-prem environments.",
+    description:
+      "Automated testing for Linux Filesystem backups and Kubernetes workloads, ensuring robustness in cloud and on-prem environments.",
     icon: React.createElement(CgWorkAlt),
     date: "Oct 2020 - Jul 2021",
     position: "right",
@@ -73,7 +78,8 @@ export const experiencesData = [
   {
     title: "Internship, Machine Learning",
     location: "HighRadius Technologies",
-    description: "Worked on predicting partial payments for B2B transactions using machine learning models and developed a full-stack invoice management application.",
+    description:
+      "Worked on predicting partial payments for B2B transactions using machine learning models and developed a full-stack invoice management application.",
     icon: React.createElement(CgWorkAlt),
     date: "Jul 2020 - Oct 2020",
     position: "right",
@@ -98,7 +104,8 @@ export const experiencesData = [
   {
     title: "Matriculation Degree",
     location: "St. Xavier's High School, Raipur",
-    description: "Completed my matriculation degree with 94.4% in the Indian Certificate School Examination (ICSE), which is the GCSE equivalent in India.",
+    description:
+      "Completed my matriculation degree with 94.4% in the Indian Certificate School Examination (ICSE), which is the GCSE equivalent in India.",
     icon: React.createElement(LuGraduationCap),
     date: "2013 - 2015",
     position: "left",
@@ -106,75 +113,55 @@ export const experiencesData = [
 ] as const;
 export const projectsData = [
   {
-    title: "Adaptive Streaming",
+    title: "Adaptively Streaming QCoW2 Disks in QEMU",
     description:
-      "Investigated the impact of snapshot streaming on QEMU QCoW2 disk images, and developed a novel 'adaptive streaming' algorithm to efficiently stream snapshots during low I/O periods.",
+      "Investigated performance drops during QEMU QCoW2 snapshot streaming and implemented a novel adaptive streaming method to reduce runtime impact.",
     tags: ["C", "QEMU", "QCoW2", "Linux", "KVM"],
     imageUrl: "/Qemu-logo.png",
-    viewUrl: "https://github.com/triii10/qemu-adaptive-streaming",
-    downloadUrl: "/Trilok_Bhattacharya_MSc_Dissertation.pdf"
+    viewUrl: "https://github.com/triii10/adaptive-streaming",
+    downloadUrl: "/Trilok_Bhattacharya_MSc_Dissertation.pdf",
   },
   {
-    title: "CDCL with C++",
+    title: "Conflict Driven Clause Learning Using C++",
     description:
-      "Implemented the CDCL algorithm in C++ for the course 'Advanced Algorithms and Data Structures'.",
+      "Implemented the CDCL algorithm in C++, including clause learning and backtracking, to solve SAT problems.",
     tags: ["C++", "CDCL", "Automated Reasoning"],
     imageUrl: "",
     viewUrl: "https://github.com/triii10/cdcl",
     downloadUrl: "",
   },
   {
-    title: "CounterStrike",
+    title: "Feature Testing Kubernetes Release Versions",
     description:
-      "Group effort to design and develop a CLI to automatically collect complex outputs from the Java Bytecode Model Checking (JBMC) tool and generate compilable counter-examples, using Rust.",
-    tags: ["JMBC", "Java", "Rust"],
-    imageUrl: "",
-    viewUrl: "https://github.com/karaolidis/comp63342-project",
-    downloadUrl: "",
-  },
-  {
-    title: "Kubernetes Issues",
-    description:
-      "Reported several issues in the Kubernetes project over the course of my employment at Commvault.",
+      "Reported Kubernetes issues affecting pod sandbox creation with long names and StatefulSet naming validation.",
     tags: ["Kubernetes", "Go", "Python"],
     imageUrl: "/k8slogo.png",
     viewUrl: "https://github.com/issues?q=is%3Aissue+author%3Atriii10+archived%3Afalse+is%3Aclosed",
     downloadUrl: "",
   },
-  {
-    title: "SGO Based Cluster Head Identification in Underwater Acoustic Sensor Networks",
-    description:
-      "Application of population-based Social Group Optimization algorithm on the NP-Hard problem of Path Planning. Accepted as a conference paper in The 5th International Conference on Future Networks & Distributed Systems, 2022.",
-    tags: ["Python", "SGO"],
-    imageUrl: "",
-    viewUrl: "https://dl.acm.org/doi/abs/10.1145/3508072.3508219",
-    downloadUrl: "",
-  },
-  {
-    title: "AI-Enabled FinTech B2B Invoice Management Application",
-    description:
-      "A full-stack Invoice Management Application using ReactJS, JDBC, Java, and JSP. Integrated with a Machine Learning Model to predict partial payments, and Dialogflow digital assistant to provide insightful answers.",
-    tags: ["Python", "Java", "JDBC", "ReactJS", "Dialogflow"],
-    imageUrl: "",
-    viewUrl: null,
-    downloadUrl: "",
-  },
 ] as const;
 
 export const skillsData = [
-  "C",
-  "C++",
-  "Python",
-  "Rust",
-  "Java",
+  "C++17",
+  "Python (NumPy, Pandas)",
+  "SQL (MySQL, T-SQL)",
+  "C#",
+  "Bash",
+  "Shopify Liquid",
+  "MFC",
+  "STL/COM",
+  "Boost",
+  "C++/CLI",
+  "TDD",
+  "MS Test",
+  "Catch2",
+  "WinDbg",
+  "Tracy",
+  "Spy++",
   "Docker",
   "Kubernetes",
-  "Linux",
-  "Bash",
+  "KVM/QEMU",
   "Git",
-  "React",
-  "QEMU",
-  "MySQL",
-  "MSSQL",
-  "Shopify Liquid",
+  "GitLab CI",
+  "KIRO/Amazon Q",
 ] as const;
