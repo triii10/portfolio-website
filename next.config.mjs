@@ -14,6 +14,9 @@ const nextConfig = {
     ];
   },
   images: {
+    // The site only uses local portfolio assets. Serving them directly keeps
+    // Next's optimiser from requiring a Cloudflare Images binding at runtime.
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
