@@ -1,30 +1,26 @@
-[![Watch tutorial here](https://img.youtube.com/vi/sUKptmUVIBM/0.jpg)](https://youtu.be/sUKptmUVIBM)
+# Trilok Bhattacharya’s portfolio
 
-# [Watch video here](https://youtu.be/sUKptmUVIBM)
+The source for [trilok.dev](https://trilok.dev), a Next.js App Router portfolio hosted on Cloudflare Workers through OpenNext. Work experience, education, projects, and skills are maintained in `lib/data.ts`. The downloadable CV and dissertation are in `public/`.
 
-## What you will learn
+## Development
 
-- Latest Next.js 13 features
-- Next.js App Router
-- Next.js Server Actions
-- Client & Server Components
-- TypeScript (Beginner & Intermediate)
-- Tailwind CSS
-- Context API
-- Advanced Animations with Framer Motion
-- React.Email & Resend
-- Custom React hooks
-- Fresh, modern UI design
-- Light & Dark mode
-- Responsive website
+Use Node.js 20 or later and pnpm 9. Install the locked dependencies and start the dev server.
 
-## Important
+```sh
+pnpm install --frozen-lockfile
+pnpm dev
+```
 
-If you want to be a professional developer, you have to know the fundamentals like JavaScript and CSS really well. I highly recommend you go through my [Professional JavaScript](https://bytegrad.com/courses/professional-javascript) and [Professional CSS](https://bytegrad.com/courses/professional-css) courses.
+Open [localhost:3000](http://localhost:3000). Run `pnpm lint`, `pnpm exec tsc --noEmit`, and `pnpm build` to check changes.
 
-I'm close to releasing a complete React & Next.js course. Get on the email list to receive early-bird pricing: [link](https://email.bytegrad.com/).
+## Contact form
 
-## Setup
+For local delivery, set `RESEND_API_KEY` in `.env.local`. Set `RESEND_FROM_EMAIL` to a sender on a Resend-verified domain, for example `Contact Form <contact@trilok.dev>` once that domain is verified. If omitted, the form uses Resend’s sandbox sender, which can send only to the address associated with the Resend account. Messages go to `hi@trilok.dev` with the visitor’s email set as the reply-to address.
 
-1. Add RESEND_API_KEY environment variable in .env.local
-2. In the send-email.ts action file, change the "to" email to your own email
+For Workers, configure these variables in the deployed worker’s settings and store the API key as a secret.
+
+## Cloudflare Workers
+
+`pnpm preview` builds and runs the Cloudflare Worker locally. `pnpm deploy` builds and deploys it through OpenNext using `wrangler.toml`.
+
+The original portfolio template is by [ByteGrad](https://youtu.be/sUKptmUVIBM).

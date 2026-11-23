@@ -3,14 +3,10 @@
 import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
-import { useSectionInView } from "@/lib/hooks";
 
 export default function About() {
-  const { ref } = useSectionInView("About");
-
   return (
     <motion.section
-      ref={ref}
       className="mb-28 max-w-[65rem] text-center leading-8 sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
@@ -19,16 +15,19 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        I&apos;m a proactive and results-oriented software engineer with more than four years of combined experience in software development, testing, and automation. I have a strong foundation in Python, C++, and C#, with a focus on developing robust, fault-tolerant systems and improving the tools around them. I&apos;m currently a Software Engineer at TP ICAP, where I work on high-throughput applications and developer tooling.
+        I enjoy working on systems where reliability and performance matter. At TP ICAP,
+        I worked on the Axiom trading platform, modernising its C++ codebase and building
+        tools for logging, audit trails, and production diagnostics.
       </p>
       <p className="mb-3">
-        At TP ICAP, I have worked on modernising a large C++ codebase, developing reusable logging and audit-trail systems, investigating production issues, and optimising CI/CD pipelines. My work has included a 32-bit to 64-bit migration spanning more than 50,000 lines of code and build-pipeline improvements that reduced build times by 30%.
+        Before moving into trading technology, I worked on Kubernetes backup and recovery at
+        Commvault. That work took me from test automation to developing C++ components and
+        investigating customer issues across Linux and Kubernetes environments.
       </p>
-      <p className="mb-3">
-        In previous roles at Commvault, I worked across Kubernetes backup and recovery, automation frameworks, Linux diagnostics, and customer escalations. I enjoy collaborating with cross-functional teams, mentoring junior developers, and using agile ways of working to deliver practical, high-quality solutions.
-      </p>
-      <p className="mb-3">
-        I hold an MSc in Advanced Computer Science from the University of Manchester, graduating with Distinction and specialising in Computer Security. I care about clear, maintainable code and enjoy solving difficult systems problems where reliability, performance, and developer experience all matter.
+      <p>
+        I earned an MSc in Advanced Computer Science with Distinction from the University
+        of Manchester, where I specialised in Computer Security and researched how QEMU
+        can stream disk images with less impact on running virtual machines.
       </p>
     </motion.section>
   );

@@ -1,18 +1,15 @@
-import React from "react";
 import { FaPaperPlane } from "react-icons/fa";
 
-export default function SubmitBtn() {
-
+export default function SubmitBtn({ pending }: { pending: boolean }) {
   return (
     <button
       type="submit"
-      className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 dark:bg-white dark:bg-opacity-10 disabled:scale-100 disabled:bg-opacity-65"
+      disabled={pending}
+      className="mt-2 flex h-12 items-center justify-center gap-2 self-start rounded-full bg-gray-900 px-5 text-white transition-colors hover:bg-gray-700 disabled:opacity-60 dark:bg-white/15 dark:hover:bg-white/25"
       data-umami-event="submit-contact"
     >
-        <>
-          Submit{" "}
-          <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}
-        </>
+      {pending ? "Sending…" : "Send message"}
+      <FaPaperPlane className="text-xs opacity-70" aria-hidden="true" />
     </button>
   );
 }

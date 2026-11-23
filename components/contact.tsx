@@ -1,77 +1,89 @@
 "use client";
 
-import React from "react";
-import SectionHeading from "./section-heading";
-import { motion } from "framer-motion";
-import { useSectionInView } from "@/lib/hooks";
-import { sendEmail } from "@/actions/sendEmail";
-import SubmitBtn from "./submit-btn";
+import { useRef, useState, type FormEvent } from "react";
 import toast from "react-hot-toast";
+import SectionHeading from "./section-heading";
+import SubmitBtn from "./submit-btn";
+
+const deliveryError = "Unable to send your message. Please try again or email me directly.";
 
 export default function Contact() {
-  const { ref } = useSectionInView("Contact");
+  const sending = useRef(false);
+  const [pending, setPending] = useState(false);
+
+  async function submitMessage(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (sending.current) return;
+
+    const form = event.currentTarget;
+    const fields = new FormData(form);
+    sending.current = true;
+    setPending(true);
+
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          senderEmail: fields.get("senderEmail"),
+          message: fields.get("message"),
+        }),
+      });
+      const data = await response.json();
+
+      if (!response.ok || data.success !== true) {
+        toast.error(response.status === 400 && typeof data.error === "string" ? data.error : deliveryError);
+        return;
+      }
+
+      form.reset();
+      toast.success("Message sent.");
+    } catch {
+      toast.error(deliveryError);
+    } finally {
+      sending.current = false;
+      setPending(false);
+    }
+  }
 
   return (
-    <motion.section
-      id="contact"
-      ref={ref}
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1,
-      }}
-      viewport={{
-        once: true,
-      }}
-    >
+    <section id="contact" className="mb-20 w-full max-w-[38rem] scroll-mt-28 text-center sm:mb-28">
       <SectionHeading>Contact me</SectionHeading>
 
-      <p className="text-gray-700 -mt-6 dark:text-white/80">
-        Please contact me directly by emailing me at{" "}
-        <a className="underline" href="mailto:hi@trilok.dev">
-        hi@trilok.dev
-        </a>{" "}
-        or by submitting this form with your message.
+      <p className="-mt-6 text-gray-700 dark:text-gray-300">
+        Email me at <a className="underline" href="mailto:hi@trilok.dev">hi@trilok.dev</a>{" "}
+        or send a message below.
       </p>
 
       <form
-        className="mt-10 flex flex-col dark:text-black"
-        action={async (formData) => {
-          const { error } = await sendEmail(formData);
-
-          if (error) {
-            toast.error(error);
-            return;
-          }
-
-          toast.success("Email sent successfully!");
-        }}
+        action="/api/send"
+        method="post"
+        onSubmit={submitMessage}
+        aria-busy={pending}
+        className="mt-8 text-left"
       >
-        <input
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-          name="senderEmail"
-          type="email"
-          required
-          maxLength={254}
-          autoComplete="email"
-          aria-label="Your email address"
-          placeholder="Your email"
-        />
-        <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-          name="message"
-          placeholder="Your message"
-          required
-          maxLength={5000}
-          aria-label="Your message"
-        />
-        <SubmitBtn />
+        <fieldset disabled={pending} className="flex min-w-0 flex-col gap-2">
+          <label htmlFor="senderEmail" className="text-sm font-medium">Your email</label>
+          <input
+            id="senderEmail"
+            className="h-14 w-full rounded-lg borderBlack bg-white px-4 dark:border-white/20 dark:bg-white/10"
+            name="senderEmail"
+            type="email"
+            required
+            maxLength={254}
+            autoComplete="email"
+          />
+          <label htmlFor="message" className="mt-3 text-sm font-medium">Your message</label>
+          <textarea
+            id="message"
+            className="h-52 w-full rounded-lg borderBlack bg-white p-4 dark:border-white/20 dark:bg-white/10"
+            name="message"
+            required
+            maxLength={5000}
+          />
+          <SubmitBtn pending={pending} />
+        </fieldset>
       </form>
-    </motion.section>
+    </section>
   );
 }
